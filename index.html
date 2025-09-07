@@ -83,7 +83,7 @@
       </div>
     </header>
     <!-- BANNER SECTION -->
-    <section class="bg-[#CFF0DC] h-[384px] relative shadow-sm">
+    <section class="bg-[#CFF0DC] h-[384px] relative shadow-sm overflow-hidden">
       <div
         class="flex flex-col justify-center items-center space-y-6 text-center"
       >
@@ -122,8 +122,8 @@
     </div>
 
     <!-- About the Campaign -->
-    <section class="bg-green-50 px-6 md:px-12 lg:px-20 py-12">
-      <h1 class="text-3xl md:text-5xl font-bold text-center mb-10">
+    <section class="bg-green-50 px-6 md:px-12 py-12">
+      <h1 class="text-3xl font-bold text-center mb-10 md:text-5xl">
         About the Campaign
       </h1>
 
@@ -133,7 +133,7 @@
         <div class="flex-1 flex justify-center">
           <img
             src="./assets/about.png"
-            alt="About Green Earth"
+            alt="Green Earth"
             class="w-3/4 md:w-full"
           />
         </div>
@@ -152,6 +152,59 @@
             <li>Support for local communities</li>
           </ul>
         </div>
+      </div>
+    </section>
+    <!-- OUR IMPACT -->
+    <section class="bg-[#CFF0DC] h-[450px] space-y-10">
+      <div>
+        <h1 class="text-2xl font-bold text-center py-10">Our Impact</h1>
+      </div>
+      <div
+        class="w-11/12 mx-auto flex flex-col justify-around space-y-6 space-x-10 md:flex-row"
+      >
+        <div
+          class="w-full md:w-4/12 h-[136px] bg-white flex flex-col justify-center items-center text-center rounded-md shadow-lg"
+        >
+          <h3 class="text-green-700 text-3xl font-bold">500k+</h3>
+          <p class="text-gray-700">Trees Planted</p>
+        </div>
+        <div
+          class="w-full md:w-4/12 h-[136px] bg-white flex flex-col justify-center items-center text-center rounded-md shadow-lg"
+        >
+          <h3 class="text-green-700 text-3xl font-bold">120+</h3>
+          <p class="text-gray-700">Communities Involed</p>
+        </div>
+        <div
+          class="w-full md:w-4/12 h-[136px] bg-white flex flex-col justify-center items-center text-center rounded-md shadow-lg"
+        >
+          <h3 class="text-green-700 text-3xl font-bold">30+</h3>
+          <p class="text-gray-700">Countries Reached</p>
+        </div>
+      </div>
+    </section>
+    <!-- PLANT A TREE TODAY -->
+    <section class="bg-green-800 p-10">
+      <h1 class="text-2xl font-bold text-center py-10 text-white">
+        Plant a Tree Today
+      </h1>
+      <div class="flex justify-center items-center w-full">
+        <fieldset class="fieldset bg-green-700 rounded-md p-6 w-full max-w-xl space-y-5">
+          <input type="text" class="input w-full" placeholder="Your Name" />
+
+          <input
+            type="text"
+            class="input w-full"
+            placeholder="Your Email Address"
+          />
+
+          <select class="select w-full">
+            <option disabled selected class="text-gray-700">Number of Trees</option>
+            <option>Crimson</option>
+            <option>Amber</option>
+            <option>Velvet</option>
+          </select>
+          <button class="btn btn-warning text-green-700">Donate Now</button>
+        </fieldset>
       </div>
     </section>
   </body>
