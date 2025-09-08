@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Green Earth</title>
     <link rel="shortcut icon" href="./assets/about.png" type="image/x-icon" />
-    <!-- font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -13,16 +12,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- Daisy UI and Tailwind -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- CSS -->
     <link rel="stylesheet" href="./styles/style.css" />
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,6 +27,7 @@
     />
   </head>
   <body>
+    <!-- NAVBAR -->
     <header>
       <div
         class="navbar bg-base-100 shadow-sm bg-[#15803D] navbar-center md:flex"
@@ -82,7 +79,7 @@
         </div>
       </div>
     </header>
-    <!-- BANNER SECTION -->
+    <!-- BANNER -->
     <section class="bg-[#CFF0DC] h-[384px] relative shadow-sm overflow-hidden">
       <div
         class="flex flex-col justify-center items-center space-y-6 text-center"
@@ -111,22 +108,39 @@
         />
       </div>
     </section>
-    <!-- CHOOSE YOUR TREES -->
-    <div class="bg-green-50">
-      <h1 class="text-5xl font-bold text-center py-10">Choose Your Trees</h1>
-      <section class="grid grid-cols-12 w-11/12 mx-auto h-[794px] gap-6">
-        <div class="border-2 border-green-500 col-span-2"></div>
-        <div class="border-2 border-red-500 col-span-8"></div>
-        <div class="border-2 border-blue-500 col-span-2"></div>
-      </section>
-    </div>
-
-    <!-- About the Campaign -->
-    <section class="bg-green-50 px-6 md:px-12 py-12">
+    <!-- CHOOSE YOUR TREES AND CATAGORIES -->
+    <section class="bg-green-50 w-full py-10 relative z-10">
+      <h1 class="text-5xl font-bold text-center mb-10">Choose Your Trees</h1>
+      <div class="grid grid-cols-12 w-11/12 mx-auto gap-6">
+        <div id="category-container" class="col-span-2 shadow-md p-4 space-y-4">
+          <h2 class="text-3xl font-bold mb-4">Categories</h2>
+          <ul id="categories-list" class="space-y-2"></ul>
+        </div>
+        <div
+          id="plants-container"
+          class="col-span-8 p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start"
+        >
+          <p class="col-span-full text-center text-gray-500">
+            Select a category to see plants
+          </p>
+        </div>
+        <div class="col-span-2">
+          <div id="cart-container" class="col-span-2 bg-white shadow-md p-4 space-y-4 rounded-md">
+              <h2 class="text-2xl font-bold mb-4">🛒 Cart</h2>
+              <ul id="cart-list" class="space-y-2"></ul>
+              <div class="flex justify-between font-bold text-lg border-t pt-2">
+              <span>Total:</span>
+              <span id="cart-total">৳0</span>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <!-- ABOUT THE CAMPAIGN SECTION -->
+    <section class="bg-green-50 px-6 md:px-12 py-12 relative z-0">
       <h1 class="text-3xl font-bold text-center mb-10 md:text-5xl">
         About the Campaign
       </h1>
-
       <div
         class="mx-auto flex flex-col md:flex-row items-center gap-10 max-w-6xl"
       >
@@ -154,7 +168,7 @@
         </div>
       </div>
     </section>
-    <!-- OUR IMPACT -->
+    <!-- Our Impact -->
     <section class="bg-[#CFF0DC] h-full space-y-10">
       <div>
         <h1 class="text-2xl font-bold text-center py-10">Our Impact</h1>
@@ -182,23 +196,25 @@
         </div>
       </div>
     </section>
-    <!-- PLANT A TREE TODAY -->
+    <!-- FORMS SECTION -->
     <section class="bg-green-800 p-10">
       <h1 class="text-2xl font-bold text-center py-10 text-white">
         Plant a Tree Today
       </h1>
       <div class="flex justify-center items-center w-full">
-        <fieldset class="fieldset bg-green-700 rounded-md p-6 w-full max-w-xl space-y-5">
+        <fieldset
+          class="fieldset bg-green-700 rounded-md p-6 w-full max-w-xl space-y-5"
+        >
           <input type="text" class="input w-full" placeholder="Your Name" />
-
           <input
-            type="text"
+            type="email"
             class="input w-full"
             placeholder="Your Email Address"
           />
-
           <select class="select w-full">
-            <option disabled selected class="text-gray-700">Number of Trees</option>
+            <option disabled selected class="text-gray-700">
+              Number of Trees
+            </option>
             <option>1</option>
             <option>2</option>
             <option>4</option>
@@ -223,9 +239,10 @@
         </fieldset>
       </div>
     </section>
-    <!-- FOOTER -->
-     <footer class="bg-green-950 h-20 flex justify-center items-center">
+    <!-- FOOTER AND COPYRIGHT -->
+    <footer class="bg-green-950 h-20 flex justify-center items-center">
       <h1 class="text-white">© 2025 Green Earth. All Rights Reserved.</h1>
-     </footer>
+    </footer>
+    <script src="./index.js"></script>
   </body>
 </html>
